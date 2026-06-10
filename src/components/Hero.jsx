@@ -19,9 +19,7 @@ const Hero = () => {
           </div>
 
           <h1 className="heading-xl">
-            Advanced Cancer Care & <br/>
-            <span className="text-teal">Trusted Oncology</span><br/>
-            in Nagpur
+            Advanced Cancer Care & <span className="text-teal">Trusted Oncology</span> in Nagpur
           </h1>
           
           <p className="hero-subtitle">
@@ -29,12 +27,12 @@ const Hero = () => {
           </p>
           
           <div className="hero-actions">
-            <button className="btn btn-primary">
-              <Calendar size={18} style={{ marginRight: '8px' }} />
+            <button className="btn btn-primary btn-large">
+              <Calendar size={20} style={{ marginRight: '10px' }} />
               Book Appointment
             </button>
-            <button className="btn btn-outline">
-              <Video size={18} style={{ marginRight: '8px' }} />
+            <button className="btn btn-outline btn-large">
+              <Video size={20} style={{ marginRight: '10px' }} />
               Online Consultation
             </button>
           </div>
