@@ -1,0 +1,91 @@
+.diagnostics-section {
+  background-color: var(--primary);
+  background-image: radial-gradient(circle at 100% 0%, var(--primary-light) 0%, transparent 50%),
+                    radial-gradient(circle at 0% 100%, var(--secondary) 0%, transparent 40%);
+  position: relative;
+  overflow: hidden;
+}
+
+.diagnostics-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.diagnostics-image-wrapper {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.diagnostic-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 4/3;
+  mix-blend-mode: luminosity;
+  opacity: 0.8;
+  transition: var(--transition);
+}
+
+.diagnostics-image-wrapper:hover .diagnostic-image {
+  mix-blend-mode: normal;
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.tech-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(26,54,93,0.4) 0%, rgba(44,122,123,0.4) 100%);
+  pointer-events: none;
+}
+
+.capabilities-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.capability-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  transition: var(--transition);
+}
+
+.capability-card:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateX(-10px);
+  border-color: var(--secondary);
+}
+
+.capability-icon {
+  color: var(--secondary-light);
+  flex-shrink: 0;
+  padding: 1rem;
+  background: rgba(44, 122, 123, 0.2);
+  border-radius: var(--radius-md);
+}
+
+@media (max-width: 992px) {
+  .diagnostics-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .diagnostics-image-wrapper {
+    order: -1;
+  }
+}
