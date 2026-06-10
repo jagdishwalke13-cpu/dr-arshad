@@ -1,5 +1,5 @@
 .hero-section {
-  padding: 5rem 0 6rem;
+  padding: 4rem 0 1rem;
   background-color: var(--bg-main);
   background-image: radial-gradient(circle at 90% 10%, var(--primary-light) 0%, transparent 40%);
   overflow: hidden;
